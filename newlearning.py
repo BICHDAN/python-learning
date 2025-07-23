@@ -98,3 +98,39 @@ print("line1\nline2")
 print("doing1\tdoing2")
 print("I\\the flower")
 print("hello1234")
+
+#practise Escape sequence
+print("hi\"on and on")
+print("okey\nfine\nok")
+print("jk\tjk2")
+print("kiki\bUi\'button\nhmmoak\tlaugh\a")
+
+#Raw String
+print(r"hello omygod okay\Fineor")
+print(R"cat and dog\ they* are not friend")
+
+#String Concatenation Operator 
+conca1="pig\n"
+conca2="cereal\n"
+print(conca1+" "+conca2)
+#String repetition Operator
+print(conca1*2+"\n"+conca2*4)
+
+#Membership Operator (in)
+print("app" in "application")
+print("banana" in "apple pie")
+
+#string Comparision Operator
+print("ohwow"=="ohwow")
+print("100"<"200")
+print("250"!="450")
+
+#Indexing
+fruit=["apple", "banana", "watermelon", "cherry", "orange"]
+print(fruit[2])
+print(fruit[4])
+
+pencil=["red color", "blue color", "black color", "white color", "green color"]
+print(pencil[2])
+print(pencil[3])
+

@@ -113,12 +113,14 @@ print(R"cat and dog\ they* are not friend")
 conca1="pig\n"
 conca2="cereal\n"
 print(conca1+" "+conca2)
+
 #String repetition Operator
 print(conca1*2+"\n"+conca2*4)
 
-#Membership Operator (in)
+#Membership Operator (in) to check if element is included in string or not
 print("app" in "application")
 print("banana" in "apple pie")
+print("oh" in "ohmygod")
 
 #string Comparision Operator
 print("ohwow"=="ohwow")
@@ -133,4 +135,30 @@ print(fruit[4])
 pencil=["red color", "blue color", "black color", "white color", "green color"]
 print(pencil[2])
 print(pencil[3])
+
+str5="How are you?"
+print(str5[3])
+
+#practise combine in and indexing (len and slicing)
+anw = "Do and Don't"
+anw2 = anw[4]
+print(anw2 in anw)
+print(len(anw))
+print(len(pencil))
+print(len(str5))
+
+#slicing
+print(anw[0:5])
+print(fruit[2:4])
+print(pencil[1:4])
+print(anw[0:])
+
+#slicing2
+
+uni = "hupipa and hepabu"
+print(uni[7::-2])
+print(uni[0:8:1])
+print(uni[0::3])
+
+
 

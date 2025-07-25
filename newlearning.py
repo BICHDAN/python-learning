@@ -154,11 +154,23 @@ print(pencil[1:4])
 print(anw[0:])
 
 #slicing2
-
 uni = "hupipa and hepabu"
 print(uni[7::-2])
 print(uni[0:8:1])
 print(uni[0::3])
+
+#Practise 
+hun, hue, mai, tina=1/2, -2.5, 3+2j, ["orange", "banana", "cake", "sugar"]
+print(hun, hue, mai, tina)
+'''combine fractise'''
+print(Decimal("0.1")+Decimal("-1.2"))
+print(Fraction(6,9)/Fraction(2,3)*Fraction(4/3)/complex(2,5))
+print(type(tina), type(hue), hue*2, tina*3)
+print(len(tina))
+
+
+
+
 
 
 

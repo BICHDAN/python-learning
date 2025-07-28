@@ -168,9 +168,27 @@ print(Fraction(6,9)/Fraction(2,3)*Fraction(4/3)/complex(2,5))
 print(type(tina), type(hue), hue*2, tina*3)
 print(len(tina))
 
-
-
-
+#type casting practise 
+#original string
+ain = "4.5"
+ain1 = "100"
+ain2 = "1010"
+#change string -> numeric
+ain3 = float("4.5")
+ain4 = int("100")
+ain5 = int("1010",2)
+print(type(ain), type(ain1),type(ain2), type(ain3), type(ain4), type(ain5))
+print(ain, ain1, ain2, ain3, ain4, ain5)
+#change numeric -> string
+ain6 = str(123)
+ain7 = str(2.34)
+print(type(ain6), type(ain7))
+#change between containers
+#tuple -> list
+ain8 = list((1, 2, 3))
+#list -> tuple
+ain9 = tuple([4, 5, 6])
+print(type(ain8), type(ain9))
 
 
 

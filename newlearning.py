@@ -159,6 +159,12 @@ print(uni[7::-2])
 print(uni[0:8:1])
 print(uni[0::3])
 
+ok1 = "HelloMyBestie"
+ok2 = ok1[:5:-1]
+ok3 = ok2 in ok1
+print(ok2)
+
+
 #Practise 
 hun, hue, mai, tina=1/2, -2.5, 3+2j, ["orange", "banana", "cake", "sugar"]
 print(hun, hue, mai, tina)
@@ -175,7 +181,7 @@ ain1 = "100"
 ain2 = "1010"
 #change string -> numeric
 ain3 = float("4.5")
-ain4 = int("100")
+ain4 = int("100")+230
 ain5 = int("1010",2)
 print(type(ain), type(ain1),type(ain2), type(ain3), type(ain4), type(ain5))
 print(ain, ain1, ain2, ain3, ain4, ain5)
@@ -189,6 +195,20 @@ ain8 = list((1, 2, 3))
 #list -> tuple
 ain9 = tuple([4, 5, 6])
 print(type(ain8), type(ain9))
+#list -> set 
+ain10 = set([1,2,3,4,5])
+#list of pairs -> dict 
 
+#change selected element of a string into another element
+#ok1 = "HelloMyBestie"
+ok4 = ok1[:2]+ "i" + ok1[3:]
+print(ok4)
 
+#String Formatting
+ok5 = 'My team is %s' %('okay and earns a lot of meme')
 
+ok6 = 'My team is {}'
+format('okay and earns a lot of meme')
+name2 = 'okay and earns a lot of meme'
+ok7 = f'My team is {name2}'
+print(ok5, ok6, ok7)

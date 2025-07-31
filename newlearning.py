@@ -211,4 +211,24 @@ ok6 = 'My team is {}'
 format('okay and earns a lot of meme')
 name2 = 'okay and earns a lot of meme'
 ok7 = f'My team is {name2}'
-print(ok5, ok6, ok7)
+print(ok5, ok6, ok7) 
+
+#string formatting 2
+
+iu = '天気がいいから%sしょう。%s'
+assign1 = iu %('散歩しま','そのうえ、アイスクリームを食べましょう。')
+print(assign1)
+iu2 =  '天気がいいから'
+iu3 = f'{iu2},アイスクリームを食べましょう'
+print(iu3)
+
+#case1
+name3 = "ズオン　ホアイ　ビック　ダン"
+address = "三原市"
+phone = "0709175"
+情報 = f'社員：{name3}\n場所：{address}\n携帯電話：{phone}'
+print(情報)
+
+#case2
+情報 = f'社員：{{name3}}\n場所：{{address}}\n携帯電話：{phone}'
+print(情報)

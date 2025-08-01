@@ -232,3 +232,40 @@ print(情報)
 #case2
 情報 = f'社員：{{name3}}\n場所：{{address}}\n携帯電話：{phone}'
 print(情報)
+
+
+#format operation
+
+#the value {0} said pick the value from position 0 in the format 
+#which is 1
+jn = "only one value: {0}".format(1, 2)
+# The value that has position 1 is 2 in format
+jn2 = "only one value: {1}".format(1,2)
+print(jn + "\n" + jn2)
+#we can actually change the name of the position similar to the one in string
+#to have a accurate value.
+jn3 = 'ok: {one}, no: {two}'.format(one=163, two=214)
+print(jn3+"\n"+jn2)
+
+o = '{:*^50}'.format('the weather is hot today')
+oo = '{:*^50}'.format('the weather is hot today')
+print( ("$"*3)+('>'*5) + oo + ('<'*5)+("$"*3) )
+
+#practice with format operation
+row1 = "+ {:-<6} + {:-^15} + {:->10} +".format('','', '')
+row2 = "| {:<6} | {:^15} | {:>10} |".format('ID', 'Ho va Ten', 'Noi sinh')
+row3 = "| {:<6} | {:^15} | {:>10} |".format('123', 'BICH DAN', 'Viet Nam')
+row4 = "+ {:-<6} + {:-^15} + {:->10} +".format('', '', '')
+print(row1 + "\n" + row2 + "\n" + row3 + "\n" + row4)
+
+#capitalize -> only cap the first alphabet of the first word. 
+row5 = jn.capitalize()
+#Upper -> change lower to uppercase
+row6 = jn.upper()
+#lower -> change upper to lowercase
+row7 = jn.lower()
+#swapcase -> change upper case to lower case and opposite
+row8 = jn.swapcase()
+#tittle -> only cap the first alphabet of words
+row9 = jn.title()
+print(row5, row6, row7, row8, row9)

@@ -238,7 +238,7 @@ print(情報)
 
 #the value {0} said pick the value from position 0 in the format 
 #which is 1
-jn = "only one value: {0}".format(1, 2)
+jn = "only one value: {0}\n".format(1, 2)
 # The value that has position 1 is 2 in format
 jn2 = "only one value: {1}".format(1,2)
 print(jn + "\n" + jn2)
@@ -269,3 +269,22 @@ row8 = jn.swapcase()
 #tittle -> only cap the first alphabet of words
 row9 = jn.title()
 print(row5, row6, row7, row8, row9)
+#center -> align word in the center 
+row10 = jn.center(50, "~")
+row11 = jn.center(50)
+print(row10 + "\n" + row11)
+
+#encode
+ia = "Cause I'm only human, and I break when I fall down" 
+ib = ia.encode(encoding='utf-8', errors='strict')
+print(ib)
+
+#join
+ic = "The episode "
+il = ic.join([" ", "1\t", "2\t", "3\t"])
+# this means -> space + (ic + 1 big space) + (ic + 2 big space) + (ic + 3 big space)
+print(il)
+
+#replace 
+ig = ic.replace("The", "The next")
+print(ig)

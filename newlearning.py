@@ -275,7 +275,7 @@ row11 = jn.center(50)
 print(row10 + "\n" + row11)
 
 #encode
-ia = "Cause I'm only human, and I break when I fall down" 
+ia = "Cause I'm only B" 
 ib = ia.encode(encoding='utf-8', errors='strict')
 print(ib)
 
@@ -288,3 +288,38 @@ print(il)
 #replace 
 ig = ic.replace("The", "The next")
 print(ig)
+ig2 = ic.replace("e", "E", 2)
+print(ig2)
+
+
+#LIST
+#list
+lst = [-0.5, 0.5, 1, 0, "okok", 2+2j, 1/2]
+lst0 = [-0.3, 0.3, 2, 3, "oh", 3+3j, 2/3]
+print(lst+lst0)
+lst1 = [2, 3]
+
+#list comprehension
+#Type 1
+lst2 = [ds for ds in range (34)]
+lst3 = [ts for ts in range (29)]
+print(lst1, lst2, lst3)
+
+#Type 2
+olst = [[a/2, a*2+1, a*4/3] for a in range (2,4)]
+lst4 = [[n,n*2, n*4] for n in range (1,6)]
+print(lst4, olst)
+#another way of Type 2
+lst5 = []
+for n in range(1,6):
+    lst5.append([n, n*2, n*4])
+print(lst5)
+
+lst6 = list("SmartTelegram")
+print(lst6)
+lst7 = list( ) 
+lst8 = list( [1, 2, 4] )  
+lst9 = list( (4, 5, 6) )    
+lst10 = list( "programe" )  
+"\n"
+print(lst7, lst7, lst8, lst9, lst10)

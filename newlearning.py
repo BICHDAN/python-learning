@@ -98,3 +98,193 @@ print("line1\nline2")
 print("doing1\tdoing2")
 print("I\\the flower")
 print("hello1234")
+
+#practise Escape sequence
+print("hi\"on and on")
+print("okey\nfine\nok")
+print("jk\tjk2")
+print("kiki\bUi\'button\nhmmoak\tlaugh\a")
+
+#Raw String
+print(r"hello omygod okay\Fineor")
+print(R"cat and dog\ they* are not friend")
+
+#String Concatenation Operator 
+conca1="pig\n"
+conca2="cereal\n"
+print(conca1+" "+conca2)
+
+#String repetition Operator
+print(conca1*2+"\n"+conca2*4)
+
+#Membership Operator (in) to check if element is included in string or not
+print("app" in "application")
+print("banana" in "apple pie")
+print("oh" in "ohmygod")
+
+#string Comparision Operator
+print("ohwow"=="ohwow")
+print("100"<"200")
+print("250"!="450")
+
+#Indexing
+fruit=["apple", "banana", "watermelon", "cherry", "orange"]
+print(fruit[2])
+print(fruit[4])
+
+pencil=["red color", "blue color", "black color", "white color", "green color"]
+print(pencil[2])
+print(pencil[3])
+
+str5="How are you?"
+print(str5[3])
+
+#practise combine in and indexing (len and slicing)
+anw = "Do and Don't"
+anw2 = anw[4]
+print(anw2 in anw)
+print(len(anw))
+print(len(pencil))
+print(len(str5))
+
+#slicing
+print(anw[0:5])
+print(fruit[2:4])
+print(pencil[1:4])
+print(anw[0:])
+
+#slicing2
+uni = "hupipa and hepabu"
+print(uni[7::-2])
+print(uni[0:8:1])
+print(uni[0::3])
+
+ok1 = "HelloMyBestie"
+ok2 = ok1[:5:-1]
+ok3 = ok2 in ok1
+print(ok2)
+
+
+#Practise 
+hun, hue, mai, tina=1/2, -2.5, 3+2j, ["orange", "banana", "cake", "sugar"]
+print(hun, hue, mai, tina)
+'''combine fractise'''
+print(Decimal("0.1")+Decimal("-1.2"))
+print(Fraction(6,9)/Fraction(2,3)*Fraction(4/3)/complex(2,5))
+print(type(tina), type(hue), hue*2, tina*3)
+print(len(tina))
+
+#type casting practise 
+#original string
+ain = "4.5"
+ain1 = "100"
+ain2 = "1010"
+#change string -> numeric
+ain3 = float("4.5")
+ain4 = int("100")+230
+ain5 = int("1010",2)
+print(type(ain), type(ain1),type(ain2), type(ain3), type(ain4), type(ain5))
+print(ain, ain1, ain2, ain3, ain4, ain5)
+#change numeric -> string
+ain6 = str(123)
+ain7 = str(2.34)
+print(type(ain6), type(ain7))
+#change between containers
+#tuple -> list
+ain8 = list((1, 2, 3))
+#list -> tuple
+ain9 = tuple([4, 5, 6])
+print(type(ain8), type(ain9))
+#list -> set 
+ain10 = set([1,2,3,4,5])
+#list of pairs -> dict 
+
+#change selected element of a string into another element
+#ok1 = "HelloMyBestie"
+ok4 = ok1[:2]+ "i" + ok1[3:]
+print(ok4)
+
+#String Formatting
+ok5 = 'My team is %s' %('okay and earns a lot of meme')
+
+ok6 = 'My team is {}'
+format('okay and earns a lot of meme')
+name2 = 'okay and earns a lot of meme'
+ok7 = f'My team is {name2}'
+print(ok5, ok6, ok7) 
+
+#string formatting 2
+
+iu = '天気がいいから%sしょう。%s'
+assign1 = iu %('散歩しま','そのうえ、アイスクリームを食べましょう。')
+print(assign1)
+iu2 =  '天気がいいから'
+iu3 = f'{iu2},アイスクリームを食べましょう'
+print(iu3)
+
+#case1
+name3 = "ズオン　ホアイ　ビック　ダン"
+address = "三原市"
+phone = "0709175"
+情報 = f'社員：{name3}\n場所：{address}\n携帯電話：{phone}'
+print(情報)
+
+#case2
+情報 = f'社員：{{name3}}\n場所：{{address}}\n携帯電話：{phone}'
+print(情報)
+
+
+#format operation
+
+#the value {0} said pick the value from position 0 in the format 
+#which is 1
+jn = "only one value: {0}\n".format(1, 2)
+# The value that has position 1 is 2 in format
+jn2 = "only one value: {1}".format(1,2)
+print(jn + "\n" + jn2)
+#we can actually change the name of the position similar to the one in string
+#to have a accurate value.
+jn3 = 'ok: {one}, no: {two}'.format(one=163, two=214)
+print(jn3+"\n"+jn2)
+
+o = '{:*^50}'.format('the weather is hot today')
+oo = '{:*^50}'.format('the weather is hot today')
+print( ("$"*3)+('>'*5) + oo + ('<'*5)+("$"*3) )
+
+#practice with format operation
+row1 = "+ {:-<6} + {:-^15} + {:->10} +".format('','', '')
+row2 = "| {:<6} | {:^15} | {:>10} |".format('ID', 'Ho va Ten', 'Noi sinh')
+row3 = "| {:<6} | {:^15} | {:>10} |".format('123', 'BICH DAN', 'Viet Nam')
+row4 = "+ {:-<6} + {:-^15} + {:->10} +".format('', '', '')
+print(row1 + "\n" + row2 + "\n" + row3 + "\n" + row4)
+
+#capitalize -> only cap the first alphabet of the first word. 
+row5 = jn.capitalize()
+#Upper -> change lower to uppercase
+row6 = jn.upper()
+#lower -> change upper to lowercase
+row7 = jn.lower()
+#swapcase -> change upper case to lower case and opposite
+row8 = jn.swapcase()
+#tittle -> only cap the first alphabet of words
+row9 = jn.title()
+print(row5, row6, row7, row8, row9)
+#center -> align word in the center 
+row10 = jn.center(50, "~")
+row11 = jn.center(50)
+print(row10 + "\n" + row11)
+
+#encode
+ia = "Cause I'm only human, and I break when I fall down" 
+ib = ia.encode(encoding='utf-8', errors='strict')
+print(ib)
+
+#join
+ic = "The episode "
+il = ic.join([" ", "1\t", "2\t", "3\t"])
+# this means -> space + (ic + 1 big space) + (ic + 2 big space) + (ic + 3 big space)
+print(il)
+
+#replace 
+ig = ic.replace("The", "The next")
+print(ig)

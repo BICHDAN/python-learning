@@ -323,3 +323,33 @@ lst9 = list( (4, 5, 6) )
 lst10 = list( "programe" )  
 "\n"
 print(lst7, lst7, lst8, lst9, lst10)
+
+#list concatenate
+lst11 = [2,3,4]
+lst11 += ["ok", "apple", "fine"]
+print(lst11) 
+lst12 = [2,5,6]
+lst12.extend(["🌹", "🌺", "🪻", "🌻"])
+print(lst12)
+
+lst13 = ["🙂", "😣", "😭", "🥶", "🥵"]
+print(lst13*3)
+
+op = lst13[0]
+op1 = lst13[2]
+op2 = lst13[1:3]
+op3 = lst13[::-1]
+print(op, op1, op2, op3, sep="\n")
+
+#replace in list 
+lst13[2] = "🩵" 
+lst13[4] = "😡"
+lst13[0] = "😼"
+print(lst13)
+
+#Matrix
+#Matrix with 4 columns, 3 rows
+matrix = [[1,2,3,4], [5,6,7,8], [9,10,11,12]]
+print(matrix)
+print(matrix[2][3])
+print(matrix[1][2])

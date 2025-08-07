@@ -353,3 +353,17 @@ matrix = [[1,2,3,4], [5,6,7,8], [9,10,11,12]]
 print(matrix)
 print(matrix[2][3])
 print(matrix[1][2])
+
+#Note
+#should not
+u = ["🐖", "🐏", "🐫", "🐘"]
+uu = u
+uu[1] = "🐶" 
+print(uu)
+print(u)
+#should
+u2 = ["🐳", "🐬", "🦐", "🦑"]
+ui = list(u2)
+ui[2] = "🐷"
+print(ui)
+print(u2)

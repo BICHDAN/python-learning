@@ -17,5 +17,8 @@ print(frac1)
 print(frac2)
 print(type(frac1), type(frac2))
 
+#Raw String
+print(r"hello omygod okay\Fineor")
+print(R"cat and dog\ they* are not friend")
 
 

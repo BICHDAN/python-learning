@@ -367,3 +367,10 @@ ui = list(u2)
 ui[2] = "🐷"
 print(ui)
 print(u2)
+
+
+#dict 
+di = {"Name":"thi mau", "age":"22"}
+print(di)
+de = {"Name":"thi 2", "age":"23"}
+print(de)

@@ -370,7 +370,35 @@ print(u2)
 
 
 #dict 
-di = {"Name":"thi mau", "age":"22"}
-print(di)
-de = {"Name":"thi 2", "age":"23"}
-print(de)
+student = {"Name":"thi mau", "age":"22"}
+print(student)
+#add new key in dict
+student["class"]="A235"
+student["weight"]=50
+student["height"]="1m60"
+student["subjects' scores"] = [{"math":10, "math plus":8}, {"biology":8, "science lab":9}, "Art:5"]
+print(student)
+print(type(student))
+
+
+#dict 2
+cat = {"name" : "kitty blue", "type" : "england long fur cat"}
+print(cat)
+#add list into a dict
+cat["fur's color"] = ["yellow", "blue", "white"]
+cat["age"] = 2
+cat["weight"] = 10
+print(cat)
+
+# print the first value of the dict 
+print(cat["fur's color"][0])
+print(cat["fur's color"][2])
+print(student["subjects' scores"][2])
+
+#set comprehension
+da = {key : value for key, value in [('Name', 'age'), ('member', 69)]}
+print(da)
+subject = ["Math", "English", "IT", "Biology"]
+score = [6, 8, 6, 9]
+report = {subject : score for subject, score in zip(subject, score)}
+print(report)

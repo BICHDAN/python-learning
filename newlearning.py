@@ -380,9 +380,18 @@ student["subjects' scores"] = [{"math":10, "math plus":8}, {"biology":8, "scienc
 print(student)
 print(type(student))
 
+Worker = {"Worker's information": [{"Full name":"Dagota Johnson", "year of birth": 1998},\
+{"Full name":"Candy Ken", "year of birth": 1989}, \
+{"Full name":"Cristen Woody", "year of birth": 1995}],\
+"Job field":["Architecture", "Landscape Architecture", "Construction"]
+}
+print(Worker["Worker's information"][1]["Full name"])
+print(Worker["Worker's information"][0]["year of birth"])
+print(Worker["Job field"][2])
+
 
 #dict 2
-cat = {"name" : "kitty blue", "type" : "england long fur cat"}
+cat = {"name" : "kitty blue", "type" : "england long fur cat", "country":"England"}
 print(cat)
 #add list into a dict
 cat["fur's color"] = ["yellow", "blue", "white"]
@@ -394,6 +403,17 @@ print(cat)
 print(cat["fur's color"][0])
 print(cat["fur's color"][2])
 print(student["subjects' scores"][2])
+
+#delete key or value in dict
+del cat["type"]
+theResult = cat.pop("name")
+print(cat)
+
+#function in dict
+print(Worker.keys())
+print(Worker.values())
+print(Worker.items())
+
 
 #set comprehension
 da = {key : value for key, value in [('Name', 'age'), ('member', 69)]}

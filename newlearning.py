@@ -422,3 +422,20 @@ subject = ["Math", "English", "IT", "Biology"]
 score = [6, 8, 6, 9]
 report = {subject : score for subject, score in zip(subject, score)}
 print(report)
+
+#built-in function
+keys = ["名前", "クラス", "生年月日"]
+d = dict.fromkeys(keys)
+print(d)
+
+e = dict.fromkeys(keys, "なし")
+print(e)
+
+#change value of a key in dict
+d["名前"] = "沖縄"
+d["クラス"] = 108
+print(d)
+
+#add/ reduce the old value 
+d["クラス"] = d["クラス"]+1
+print(d)

@@ -432,10 +432,39 @@ e = dict.fromkeys(keys, "なし")
 print(e)
 
 #change value of a key in dict
-d["名前"] = "沖縄"
+d["名前"] = "検討"
 d["クラス"] = 108
 print(d)
 
 #add/ reduce the old value 
 d["クラス"] = d["クラス"]+1
 print(d)
+d["名前"] = d["名前"]+"山崎"
+print(d)
+
+#dict method
+#dict.copy()
+d2 = d.copy()
+print(d2)
+#dict.clear()
+d2.clear()
+print(d2)
+#dict.get(key, default)
+print(d.get("名前"))
+print(d.get("ok","???"))
+print(Worker.get("Job field"))
+print(Worker.get("information", "???"))
+#dict.items()
+print(d.items())
+print(Worker.items())
+ong = list(d.items())
+print(ong[1])
+#dict.keys()
+print(Worker.keys())
+print(d.keys())
+#dict.values()
+print(Worker.values())
+print(d.values())
+#dict.pop(key, default)
+print(d.pop("名前","???"))
+print(d.pop("cator", "???"))

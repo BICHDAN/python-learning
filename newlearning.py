@@ -468,3 +468,16 @@ print(d.values())
 #dict.pop(key, default)
 print(d.pop("名前","???"))
 print(d.pop("cator", "???"))
+
+#dict practice
+keys2 = ["The name", "level", "university"]
+uni = dict.fromkeys(keys2,"none")
+
+uni["The name"]=["岡村さん", "美咲さん"]
+uni["level"]=["N2","N4"]
+uni["university"]="University of Architecture "
+print(uni)
+print(uni.keys())
+print(uni.values())
+print(uni.get("The name"))
+print(uni.get("problem", "???"))

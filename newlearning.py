@@ -367,3 +367,117 @@ ui = list(u2)
 ui[2] = "🐷"
 print(ui)
 print(u2)
+
+
+#dict 
+student = {"Name":"thi mau", "age":"22"}
+print(student)
+#add new key in dict
+student["class"]="A235"
+student["weight"]=50
+student["height"]="1m60"
+student["subjects' scores"] = [{"math":10, "math plus":8}, {"biology":8, "science lab":9}, "Art:5"]
+print(student)
+print(type(student))
+
+Worker = {"Worker's information": [{"Full name":"Dagota Johnson", "year of birth": 1998},\
+{"Full name":"Candy Ken", "year of birth": 1989}, \
+{"Full name":"Cristen Woody", "year of birth": 1995}],\
+"Job field":["Architecture", "Landscape Architecture", "Construction"]
+}
+print(Worker["Worker's information"][1]["Full name"])
+print(Worker["Worker's information"][0]["year of birth"])
+print(Worker["Job field"][2])
+
+
+#dict 2
+cat = {"name" : "kitty blue", "type" : "england long fur cat", "country":"England"}
+print(cat)
+#add list into a dict
+cat["fur's color"] = ["yellow", "blue", "white"]
+cat["age"] = 2
+cat["weight"] = 10
+print(cat)
+
+# print the first value of the dict 
+print(cat["fur's color"][0])
+print(cat["fur's color"][2])
+print(student["subjects' scores"][2])
+
+#delete key or value in dict
+del cat["type"]
+theResult = cat.pop("name")
+print(cat)
+
+#function in dict
+print(Worker.keys())
+print(Worker.values())
+print(Worker.items())
+
+
+#set comprehension
+da = {key : value for key, value in [('Name', 'age'), ('member', 69)]}
+print(da)
+subject = ["Math", "English", "IT", "Biology"]
+score = [6, 8, 6, 9]
+report = {subject : score for subject, score in zip(subject, score)}
+print(report)
+
+#built-in function
+keys = ["名前", "クラス", "生年月日"]
+d = dict.fromkeys(keys)
+print(d)
+
+e = dict.fromkeys(keys, "なし")
+print(e)
+
+#change value of a key in dict
+d["名前"] = "検討"
+d["クラス"] = 108
+print(d)
+
+#add/ reduce the old value 
+d["クラス"] = d["クラス"]+1
+print(d)
+d["名前"] = d["名前"]+"山崎"
+print(d)
+
+#dict method
+#dict.copy()
+d2 = d.copy()
+print(d2)
+#dict.clear()
+d2.clear()
+print(d2)
+#dict.get(key, default)
+print(d.get("名前"))
+print(d.get("ok","???"))
+print(Worker.get("Job field"))
+print(Worker.get("information", "???"))
+#dict.items()
+print(d.items())
+print(Worker.items())
+ong = list(d.items())
+print(ong[1])
+#dict.keys()
+print(Worker.keys())
+print(d.keys())
+#dict.values()
+print(Worker.values())
+print(d.values())
+#dict.pop(key, default)
+print(d.pop("名前","???"))
+print(d.pop("cator", "???"))
+
+#dict practice
+keys2 = ["The name", "level", "university"]
+uni = dict.fromkeys(keys2,"none")
+
+uni["The name"]=["岡村さん", "美咲さん"]
+uni["level"]=["N2","N4"]
+uni["university"]="University of Architecture "
+print(uni)
+print(uni.keys())
+print(uni.values())
+print(uni.get("The name"))
+print(uni.get("problem", "???"))

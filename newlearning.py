@@ -536,6 +536,8 @@ if x > 10 and x < 20:
     print("x is greater than 10 but smaller than 20")
 elif x <10 or x <= 0:
     print("x is smaller than 10 and maybe = 0 ")
+elif x == 19:
+    print("x = 19")
 else:
     print("another circumstance")
     
@@ -549,3 +551,4 @@ else :
 age=20
 status = "大人" if age >= 18 else "子供"
 print(status)
+

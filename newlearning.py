@@ -467,7 +467,7 @@ print(Worker.values())
 print(d.values())
 #dict.pop(key, default)
 print(d.pop("名前","???"))
-print(d.pop("cator", "???"))
+print(d.pop("cator", "???")) 
 
 #dict practice
 keys2 = ["The name", "level", "university"]
@@ -480,4 +480,75 @@ print(uni)
 print(uni.keys())
 print(uni.values())
 print(uni.get("The name"))
-print(uni.get("problem", "???"))
+print(uni.get("problem", "???")) 
+
+
+
+#Boolean learning 
+print(bool(0))
+print(bool(29))
+print(bool(""))
+
+#if with Boolean 
+s = 48
+if s < 45: print("s is greater than 45")
+if s > 45: print("s is smaller than 45")
+
+
+r = []
+if r: print("there is a value")
+else: print("this list is empty")
+
+
+#Boolean with if, elif, else
+rrr = 7
+w = 19
+if rrr < w : print("rrr is smaller than w")
+elif rrr > w : print("rrr is bigger than w")
+else : print("rrr is equal to w")
+
+#Boolean with logic operators
+print(0 and 12)
+print(2 and 2)
+print("" or 2)
+print(not "")
+
+
+#Branching Statement
+x = 3
+if x > 5:
+    print("x is bigger than 5")
+elif x <9:
+    print("x is smaller than 9")
+else:
+    print("x is nothing at all")
+    
+age = 17
+if age < 18: 
+    print("age is eligal")
+elif age >= 18:
+    print("age is not eligal at all")
+else:
+    print("can not be identified ")
+    
+x = 19
+if x > 10 and x < 20:
+    print("x is greater than 10 but smaller than 20")
+elif x <10 or x <= 0:
+    print("x is smaller than 10 and maybe = 0 ")
+elif x == 19:
+    print("x = 19")
+else:
+    print("another circumstance")
+    
+Raining = False
+if not Raining:
+    print("it is not raining at all, Let's play outside")
+else :
+    print("let'S just stay inside the house")
+    
+#ternary operator
+age=20
+status = "大人" if age >= 18 else "子供"
+print(status)
+

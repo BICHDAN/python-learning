@@ -552,3 +552,23 @@ age=20
 status = "大人" if age >= 18 else "子供"
 print(status)
 
+
+
+#While loop 
+e = 1
+while e <= 10:
+    print(e)
+    e = e + 1 
+    
+while True:
+    name9 = input("type your name (type 's' if you want to stop):黒澤")
+    if name9 == 's':
+        break
+    print("hello", name9)
+
+while True:
+    location = input("type your location ( or type 'st' to stop):京都")
+    if location == 'st':
+        break
+    print("thank god you let me know your location, so you are at",location)
+

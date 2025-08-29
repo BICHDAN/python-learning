@@ -561,14 +561,29 @@ while e <= 10:
     e = e + 1 
     
 while True:
-    name9 = input("type your name (type 's' if you want to stop):黒澤")
-    if name9 == 's':
+    nameofyou = input("type your name (type 's' if you want to stop):")
+    if nameofyou == 's':
         break
-    print("hello", name9)
+    print("hello", nameofyou,"really nice to meet you 🥳")
 
 while True:
-    location = input("type your location ( or type 'st' to stop):京都")
-    if location == 'st':
+    location = input("type your location ( type 's'to stop):")
+    if location == 's':
         break
-    print("thank god you let me know your location, so you are at",location)
+    print("oh my god, you are in",location,"where have you been, dear🥹?\nso you actually in",location,"\n","how do you feel now?🤓")
+
+
+while True:
+    feeling = input("type your feeling(type 's' to stop):")
+    if feeling == 's':
+        break
+    print("so you actually feel",feeling, "right now😶‍🌫️")
+
+
+while True:
+    ageofyou = input("type your age (type's' to stop):")
+    if ageofyou == 's':
+        break
+    print("I know it is impolite to ask your age is", ageofyou, "🥹, but by the ways thanks for letting me know🩵")
+    
 

@@ -587,3 +587,27 @@ while True:
     print("I know it is impolite to ask your age is", ageofyou, "🥹, but by the ways thanks for letting me know🩵")
     
 
+s = "the word that fly away"
+idx = 0 
+length = len(s)
+
+while idx <length:
+    print(idx, 'stands for', s[idx])
+    idx += 1
+
+
+
+#For loop 
+for i in ["🍌","🍍","🍓","🫐","🥭"]:
+    print("buy me a",i)
+    
+for li in range(2,9):
+    print(li,"next")
+
+for le in range(1,19,3):
+    print(le,"jump")
+
+kl = "maddog"
+for uk in kl:
+    print(uk)
+

@@ -552,3 +552,62 @@ age=20
 status = "大人" if age >= 18 else "子供"
 print(status)
 
+
+
+#While loop 
+e = 1
+while e <= 10:
+    print(e)
+    e = e + 1 
+    
+while True:
+    nameofyou = input("type your name (type 's' if you want to stop):")
+    if nameofyou == 's':
+        break
+    print("hello", nameofyou,"really nice to meet you 🥳")
+
+while True:
+    location = input("type your location ( type 's'to stop):")
+    if location == 's':
+        break
+    print("oh my god, you are in",location,"where have you been, dear🥹?\nso you actually in",location,"\n","how do you feel now?🤓")
+
+
+while True:
+    feeling = input("type your feeling(type 's' to stop):")
+    if feeling == 's':
+        break
+    print("so you actually feel",feeling, "right now😶‍🌫️")
+
+
+while True:
+    ageofyou = input("type your age (type's' to stop):")
+    if ageofyou == 's':
+        break
+    print("I know it is impolite to ask your age is", ageofyou, "🥹, but by the ways thanks for letting me know🩵")
+    
+
+s = "the word that fly away"
+idx = 0 
+length = len(s)
+
+while idx <length:
+    print(idx, 'stands for', s[idx])
+    idx += 1
+
+
+
+#For loop 
+for i in ["🍌","🍍","🍓","🫐","🥭"]:
+    print("buy me a",i)
+    
+for li in range(2,9):
+    print(li,"next")
+
+for le in range(1,19,3):
+    print(le,"jump")
+
+kl = "maddog"
+for uk in kl:
+    print(uk)
+

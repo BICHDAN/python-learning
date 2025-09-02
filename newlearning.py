@@ -27,7 +27,7 @@ print("thing")
 #practise calculator only
 hi = "anh"
 hu = "em"
-ha = hi+hu
+ha = hi+hu 
 print(ha)
 
 #test data type
@@ -607,7 +607,20 @@ for li in range(2,9):
 for le in range(1,19,3):
     print(le,"jump")
 
-kl = "maddog"
+kl = "dog"
 for uk in kl:
     print(uk)
 
+#learning Function
+def say_hello():
+    print("hello and xin chao")
+    print("ok, nice to meet you")
+
+for i in range(3):
+    say_hello()
+
+
+def lottery_ticket():
+    return "please bye a lottery ticket\n then check the range of numbers\n"
+
+print(lottery_ticket() * 3)

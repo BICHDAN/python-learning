@@ -624,3 +624,34 @@ def lottery_ticket():
     return "please bye a lottery ticket\n then check the range of numbers\n"
 
 print(lottery_ticket() * 3)
+
+def greet(name) : 
+    print("Hello honey", name)
+greet("Nam") 
+
+def age_asking (age):
+    print("oh how old are you bae?\nyou are" ,age,
+".really, you look so young with that age!" )
+
+age_asking(27)
+
+def location_asking (location):
+    print("So can I ask you one more question\n"
+,"where do you live? I'm from Okinawa, and you are?\n",
+"nice!you are living in",location,"now")
+
+location_asking("Mihara")
+
+def calculate(a, b):
+    return a+b
+
+print(calculate(10, 29))
+
+def Date_of_birth(date = []):
+    date. append("F")
+    print(date)
+
+Date_of_birth()
+Date_of_birth()
+
+

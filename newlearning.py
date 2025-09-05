@@ -654,4 +654,32 @@ def Date_of_birth(date = []):
 Date_of_birth()
 Date_of_birth()
 
+#the long method
+def Food(a, b, c, d):
+    print(a)
+    print(b)
+    print(c)
+    print("end",d)
+lstn = ["popcorn", "black bean sweet soup", "chicken rice", "fry seafood pancake"]
+Food(lstn[0], lstn[1], lstn[2], lstn[3])
 
+#the upadte method
+def Drink(g,h,i,j):
+    print(g, "\n",h,"\n",i,)
+    print("and the last one is",j)
+list1 = ["soda", "lemond water", "matcha latte", "mango ice yogust"]
+Drink(*list1)
+
+
+def animal(w, x, y, *, j="elephant"):
+    print(w, x, y, j)
+    print(r)
+
+list2 = ["lion", "rabbit", "mouse"]
+animal(*list2, j="hourse")
+
+def animal(w,x,y, *, j):
+    print(w,x,y,j)
+    print(r)
+list2 = ["lion", "rabbit", "mouse","platerbush"]
+animal(*list2, j = "hourse")

@@ -677,9 +677,3 @@ def animal(w, x, y, *, j="elephant"):
 
 list2 = ["lion", "rabbit", "mouse"]
 animal(*list2, j="hourse")
-
-def animal(w,x,y, *, j):
-    print(w,x,y,j)
-    print(r)
-list2 = ["lion", "rabbit", "mouse","platerbush"]
-animal(*list2, j = "hourse")

@@ -677,3 +677,40 @@ def animal(w, x, y, *, j="elephant"):
 
 list2 = ["lion", "rabbit", "mouse"]
 animal(*list2, j="hourse")
+
+def crown(*kings):
+    print(kings)
+    print(type(kings))
+crown(*(x for x in range(39))) #unpack then pack 
+
+def online(a,b):
+    print(a)
+    print(b)
+dic = {"name":"juuwon", "age":23}
+online(*dic)
+
+def keo(**kwargs):
+    for key, value in kwargs.items():
+        print(key, '->', value)
+        
+keo(name='Calem', location='USA')
+
+def fruit_list(**fruits):
+    for key,value in fruits.items():
+        print(key, ":", value) 
+fruit_list(types = ["banana", "waterlemon", "apple"], 
+date_of_expire=["2025/09/09", "2025/09/08","2025/09/18"])
+
+#global and local 
+def make_global():
+    global x 
+    x = 1
+    
+def local():
+    x = 5
+    print('x in local', x)
+    
+make_global()
+print(x)
+local()
+print(x)

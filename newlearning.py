@@ -714,3 +714,17 @@ make_global()
 print(x)
 local()
 print(x)
+
+def change_number(l):
+    l = l+9
+    print("Inside function:", l)
+v = 2
+change_number(v)
+print("Outside function:", v)
+
+def add_item(mylist):
+    mylist.append("apple")
+    print("inside:", mylist)
+fruits = ["banana"]
+add_item(fruits)
+print("outside:", fruits)

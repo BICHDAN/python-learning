@@ -728,3 +728,33 @@ def add_item(mylist):
 fruits = ["banana"]
 add_item(fruits)
 print("outside:", fruits)
+
+
+#return in funtion 
+def cal_rec_per(width, height):
+    per = (width+height)*2
+    return per
+rec_1_width = 5
+rec_1_height = 7
+#create a varibale to recevie the result:
+rec_1_per = cal_rec_per(rec_1_width, rec_1_height)
+print(rec_1_per)
+
+#this case is when you think you don't need to reused it at all:
+print(cal_rec_per(7,4))
+
+def return_ter_func():
+    print("this sentence can be read")
+    return 
+    print("this sentence can not be read")
+none1 = return_ter_func()
+print(type(none1))
+
+def  cal_rec_area_per(width, height):
+    perimeter = (width + height)*2
+    area = width * height
+    return perimeter, area
+rec_width = 9
+rec_height = 6
+rec_per, rec_area = cal_rec_area_per(rec_width, rec_height)
+print(rec_per, rec_area)

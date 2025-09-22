@@ -758,3 +758,28 @@ rec_width = 9
 rec_height = 6
 rec_per, rec_area = cal_rec_area_per(rec_width, rec_height)
 print(rec_per, rec_area)
+
+#Lambda
+okj = lambda a, b, c: ((a+b-c)*3)/2
+print(okj(1,38,9))
+#defaut argument
+okh = lambda a, y = 9: a * y
+print(okh(2))
+#using local and global variables in Lambda
+def DTeam():
+    member = lambda x: "from now on " + x + " is DTeam's member, please give an applause!"
+    return member # return a anonymous function
+call_member = DTeam() # assign a variable to recevie DTeam's variable
+print (call_member("Little Owl"))
+print (call_member("FunnyBunny"))
+
+Dteam_list = [lambda x:x**2, lambda x:x**3, lambda x:x**4]
+print(Dteam_list[1](2))
+print(Dteam_list[0](3))
+
+#Using Loop in lambda
+Dteam_list2 = [lambda y:y*2, lambda y:y*3, lambda y:y*4]
+for okin in Dteam_list2:
+    print(okin(4))
+
+ 

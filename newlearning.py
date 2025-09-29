@@ -782,4 +782,33 @@ Dteam_list2 = [lambda y:y*2, lambda y:y*3, lambda y:y*4]
 for okin in Dteam_list2:
     print(okin(4))
 
- 
+#Map () function
+inue = [3, 4, 5, 1]
+theend = map(lambda x : (x+2)/2, inue)
+print(list(theend))
+
+oij = [3, 5, 9, 20]
+ketka = map(lambda y:(y/3)*2, oij)
+print(list(ketka))
+
+express = lambda x, y: (x*y)-(x+y)
+o1 = [2, 3, 4, 5]
+o2 = [6, 7, 8, 9]
+o3 = map(express, o1, o2)
+print (list(o3))
+
+#filter function
+func1 = lambda x: x>0
+oj = [2, -1, 3, 0, -3, 5]
+oj2 = filter (func1, oj)
+print(list(oj2))
+#similar way to filter function:
+func1 = lambda x: x>0
+oj = [2, -1, 3, 0, -3, 5]
+print([x for x in oj if x>0])
+
+#reduce functool
+from functools import reduce
+num = [2, 3, 4, 5]
+output = reduce(lambda x,y: x + y, num)
+print(output)

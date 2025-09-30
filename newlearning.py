@@ -812,3 +812,27 @@ from functools import reduce
 num = [2, 3, 4, 5]
 output = reduce(lambda x,y: x + y, num)
 print(output)
+
+
+#Recursion
+def countdown(n):
+    if n == 0:  #base case if n=0 then stop and print HPNY
+        print("Happy New Year!")
+    else:
+        print(n)
+        countdown(n-1) #recursion case 
+countdown(5)
+#in this case the countdown(n-1) is the recursion that keep calling 
+#n again until the expression make the n turn into 0
+
+def max(j):
+    if j == 0:
+        print("ok done")
+    else:
+        print(j)
+        max(j-2+1)
+max(8)
+    
+
+        
+

@@ -27,7 +27,7 @@ print("thing")
 #practise calculator only
 hi = "anh"
 hu = "em"
-ha = hi+hu
+ha = hi+hu 
 print(ha)
 
 #test data type
@@ -607,7 +607,232 @@ for li in range(2,9):
 for le in range(1,19,3):
     print(le,"jump")
 
-kl = "maddog"
+kl = "dog"
 for uk in kl:
     print(uk)
+
+#learning Function
+def say_hello():
+    print("hello and xin chao")
+    print("ok, nice to meet you")
+
+for i in range(3):
+    say_hello()
+
+
+def lottery_ticket():
+    return "please bye a lottery ticket\n then check the range of numbers\n"
+
+print(lottery_ticket() * 3)
+
+def greet(name) : 
+    print("Hello honey", name)
+greet("Nam") 
+
+def age_asking (age):
+    print("oh how old are you bae?\nyou are" ,age,
+".really, you look so young with that age!" )
+
+age_asking(27)
+
+def location_asking (location):
+    print("So can I ask you one more question\n"
+,"where do you live? I'm from Okinawa, and you are?\n",
+"nice!you are living in",location,"now")
+
+location_asking("Mihara")
+
+def calculate(a, b):
+    return a+b
+
+print(calculate(10, 29))
+
+def Date_of_birth(date = []):
+    date. append("F")
+    print(date)
+
+Date_of_birth()
+Date_of_birth()
+
+#the long method
+def Food(a, b, c, d):
+    print(a)
+    print(b)
+    print(c)
+    print("end",d)
+lstn = ["popcorn", "black bean sweet soup", "chicken rice", "fry seafood pancake"]
+Food(lstn[0], lstn[1], lstn[2], lstn[3])
+
+#the upadte method
+def Drink(g,h,i,j):
+    print(g, "\n",h,"\n",i,)
+    print("and the last one is",j)
+list1 = ["soda", "lemond water", "matcha latte", "mango ice yogust"]
+Drink(*list1)
+
+
+def animal(w, x, y, *, j="elephant"):
+    print(w, x, y, j)
+    print(r)
+
+list2 = ["lion", "rabbit", "mouse"]
+animal(*list2, j="hourse")
+
+def crown(*kings):
+    print(kings)
+    print(type(kings))
+crown(*(x for x in range(39))) #unpack then pack 
+
+def online(a,b):
+    print(a)
+    print(b)
+dic = {"name":"juuwon", "age":23}
+online(*dic)
+
+def keo(**kwargs):
+    for key, value in kwargs.items():
+        print(key, '->', value)
+        
+keo(name='Calem', location='USA')
+
+def fruit_list(**fruits):
+    for key,value in fruits.items():
+        print(key, ":", value) 
+fruit_list(types = ["banana", "waterlemon", "apple"], 
+date_of_expire=["2025/09/09", "2025/09/08","2025/09/18"])
+
+#global and local 
+def make_global():
+    global x 
+    x = 1
+    
+def local():
+    x = 5
+    print('x in local', x)
+    
+make_global()
+print(x)
+local()
+print(x)
+
+def change_number(l):
+    l = l+9
+    print("Inside function:", l)
+v = 2
+change_number(v)
+print("Outside function:", v)
+
+def add_item(mylist):
+    mylist.append("apple")
+    print("inside:", mylist)
+fruits = ["banana"]
+add_item(fruits)
+print("outside:", fruits)
+
+
+#return in funtion 
+def cal_rec_per(width, height):
+    per = (width+height)*2
+    return per
+rec_1_width = 5
+rec_1_height = 7
+#create a varibale to recevie the result:
+rec_1_per = cal_rec_per(rec_1_width, rec_1_height)
+print(rec_1_per)
+
+#this case is when you think you don't need to reused it at all:
+print(cal_rec_per(7,4))
+
+def return_ter_func():
+    print("this sentence can be read")
+    return 
+    print("this sentence can not be read")
+none1 = return_ter_func()
+print(type(none1))
+
+def  cal_rec_area_per(width, height):
+    perimeter = (width + height)*2
+    area = width * height
+    return perimeter, area
+rec_width = 9
+rec_height = 6
+rec_per, rec_area = cal_rec_area_per(rec_width, rec_height)
+print(rec_per, rec_area)
+
+#Lambda
+okj = lambda a, b, c: ((a+b-c)*3)/2
+print(okj(1,38,9))
+#defaut argument
+okh = lambda a, y = 9: a * y
+print(okh(2))
+#using local and global variables in Lambda
+def DTeam():
+    member = lambda x: "from now on " + x + " is DTeam's member, please give an applause!"
+    return member # return a anonymous function
+call_member = DTeam() # assign a variable to recevie DTeam's variable
+print (call_member("Little Owl"))
+print (call_member("FunnyBunny"))
+
+Dteam_list = [lambda x:x**2, lambda x:x**3, lambda x:x**4]
+print(Dteam_list[1](2))
+print(Dteam_list[0](3))
+
+#Using Loop in lambda
+Dteam_list2 = [lambda y:y*2, lambda y:y*3, lambda y:y*4]
+for okin in Dteam_list2:
+    print(okin(4))
+
+#Map () function
+inue = [3, 4, 5, 1]
+theend = map(lambda x : (x+2)/2, inue)
+print(list(theend))
+
+oij = [3, 5, 9, 20]
+ketka = map(lambda y:(y/3)*2, oij)
+print(list(ketka))
+
+express = lambda x, y: (x*y)-(x+y)
+o1 = [2, 3, 4, 5]
+o2 = [6, 7, 8, 9]
+o3 = map(express, o1, o2)
+print (list(o3))
+
+#filter function
+func1 = lambda x: x>0
+oj = [2, -1, 3, 0, -3, 5]
+oj2 = filter (func1, oj)
+print(list(oj2))
+#similar way to filter function:
+func1 = lambda x: x>0
+oj = [2, -1, 3, 0, -3, 5]
+print([x for x in oj if x>0])
+
+#reduce functool
+from functools import reduce
+num = [2, 3, 4, 5]
+output = reduce(lambda x,y: x + y, num)
+print(output)
+
+
+#Recursion
+def countdown(n):
+    if n == 0:  #base case if n=0 then stop and print HPNY
+        print("Happy New Year!")
+    else:
+        print(n)
+        countdown(n-1) #recursion case 
+countdown(5)
+#in this case the countdown(n-1) is the recursion that keep calling 
+#n again until the expression make the n turn into 0
+
+def max(j):
+    if j == 0:
+        print("ok done")
+    else:
+        print(j)
+        max(j-2+1)
+max(8)
+    
+
+        
 

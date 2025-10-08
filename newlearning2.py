@@ -34,3 +34,39 @@ class Cat:
 cat1 = Cat("Layla", "negative", "black and yellow")
 print (cat1.name, "\n", cat1.characteristic)
 cat1.growl()
+
+class student:
+    def __init__(self, name, age, hobby):
+        self.name = name 
+        self.age = age
+        self.hobby = hobby
+        pass
+    def Yelling(self):
+        print(f"{self.name} attended, teacher!")
+
+student1 = student("John","18", "play video game")
+print(student1.name, student1.age)
+student1.Yelling()
+
+#attribute of class
+class PowerRanger:
+    STT = 1
+    so_thu_tu = 1
+    power = "50%"
+    
+    def __init__(self, name, weapon, color ):
+        self.name = "Power Ranger " + name
+        self.weapon = "Power Ranger " + name + "is using "+ weapon
+        self.color = color
+        
+        self.STT = PowerRanger.so_thu_tu
+        
+        PowerRanger.so_thu_tu += 1 
+        
+PowerRangerA = PowerRanger("Thunder", "Hammer", "blue")
+PowerRangerB = PowerRanger("Light", "Book", "Yellow")
+
+print(PowerRangerA.STT)
+print(PowerRangerB.STT)
+
+        

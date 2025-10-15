@@ -111,3 +111,39 @@ Army1.reply()
 Army2.Yelling()
 Army2.birthday2()
 Army2.reply2()
+
+#Class method 
+class Members:
+    total_members = 0 #shared data of the class
+    
+    def __init__(self, name):
+        self.name = name
+        Members.total_members += 1
+    @classmethod
+    def show_total(cls):
+        print(f"Total members: {cls.total_members}")
+
+Member1 = Members("Alice")
+Member2 = Members("Johnson")
+Member3 = Members("Dagota")
+Member4 = Members("Okinawa")
+Member5 = Members("Bich Dan")
+
+Members.show_total()
+
+# create a special object with class method 
+class Student:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        
+    @classmethod
+    def from_string(cls, text):
+        name, age = text.split("-") # split the string"Alice-20" into ["Alice","20"]
+        return cls(name, int(age)) # after using split, Python will turn 20 into "20" 
+    #which is a string -> use int(age)to change the variable string into integer again 
+    
+s1 = Student.from_string("Alice-20")
+print(s1.name, s1.age) # Alice 20
+    
+        

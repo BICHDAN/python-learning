@@ -146,4 +146,24 @@ class Student:
 s1 = Student.from_string("Alice-20")
 print(s1.name, s1.age) # Alice 20
     
-        
+
+class Flower:
+    def __init__(self, name, types, color):
+        self.name = name
+        self.types = types
+        self.color = color
+    @classmethod
+    def from_string(cls, s): #from method
+        lst = s.split('-') # split string by '-' EX: ok-ik --> "ok","ik"
+        new_lst = [st.strip() for st in lst] #st.strip()is for delete, 
+        #unnessary space before and after a string after split,
+        #st is a temporary variable, you can change it into ok/ki/oj/v.v
+        name, types, color = new_lst #to assign name, types, color along with the vararibles in new_list
+        return cls(name, types, color) # use return cls () to create new object
+
+infor_str = "Camilia-garden flower-Red"
+FlowerA = Flower.from_string(infor_str)
+FlowerB = Flower.from_string("Ogchid-garden flower-Yellow and White")
+FlowerC = Flower.from_string("Rose - normal flower - Red and Black")
+print(FlowerA.__dict__, "\n", FlowerB.__dict__, "\n", FlowerC.__dict__) # print as a dict
+

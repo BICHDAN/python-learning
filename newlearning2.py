@@ -179,3 +179,19 @@ class BankAccount:
     
 print (BankAccount.account_number(1298374751))
 print(BankAccount.account_number("d9883949993"))
+
+#Inheritance in OOP
+
+#parent class
+class Animal:
+    def speak(self):
+        print("Animal is making sound")
+
+#child class
+class dog (Animal):
+    def bark (self):
+        print("wow wow!")
+
+犬 = dog()
+犬.speak()
+犬.bark()

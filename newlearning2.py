@@ -167,3 +167,15 @@ FlowerB = Flower.from_string("Ogchid-garden flower-Yellow and White")
 FlowerC = Flower.from_string("Rose - normal flower - Red and Black")
 print(FlowerA.__dict__, "\n", FlowerB.__dict__, "\n", FlowerC.__dict__) # print as a dict
 
+#static method 
+class BankAccount:
+    def __init__(self, owner, balance):
+        self.owner = owner
+        self.balance = balance
+    @staticmethod
+    def account_number (accountNum) :
+        #only approve number that contain 10 numbers
+        return len(str(accountNum)) == 10 and str(accountNum).isdigit()
+    
+print (BankAccount.account_number(1298374751))
+print(BankAccount.account_number("d9883949993"))

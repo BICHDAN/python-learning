@@ -195,3 +195,76 @@ class dog (Animal):
 犬 = dog()
 犬.speak()
 犬.bark()
+
+#Method Overriding:
+class Parents:
+    def Punish (self):
+        print("you will be grounded for 2 weeks with no phone!")
+class Child(Parents):
+    def Punish (self):
+        print("you will be grounded for 2 days with no phone")
+
+FirstChild = Child()
+FirstChild.Punish()
+
+#expand method
+class Child2(Parents):
+    def Punish(self):
+        super().Punish()
+        print("no need")
+SeChild = Child2()
+SeChild.Punish()
+
+
+#exercise 1:
+class BankAccount:
+    def __init__(self, owner, balance=0):
+        self.owner = owner
+        self.balance = balance
+    def deposit(self, amount):
+        self.balance = self.balance + amount
+    def withdrawn (self, amount):
+        if self.balance >= amount:
+            self.balance = self.balance - amount
+        else:
+            print("Insuddicient funds")
+    def show_balance(self):
+        print(f"balance = {self.balance}")
+
+a1 = BankAccount("Taro", 1000)
+a1.deposit(500)
+a1.withdrawn(2000)
+a1.withdrawn(800)
+a1.show_balance()
+
+#exercise 2: 
+class Member:
+    total = 0
+    def __init__(self, name):
+        self.name = name
+        Member.total += 1 #Member.total is a class attribute 
+        #-> init create a object will in crease total.
+        # -> if put in method -> Only update total 1 time  
+    @classmethod
+    def show_total(cls):
+        print(f"Total members: {Member.total}")
+m1 = Member("Aki")
+m2 = Member("Sora")
+Member.show_total()
+
+#exercise 3: Inheritance and Method Overriding:
+class Animal:
+    def speak (self):
+        print("Animal sound")
+class Dog(Animal):
+    def speak(self):
+        print("Woof!")
+
+a = Animal()
+d = Dog()
+a.speak()
+d.speak()
+
+
+
+        

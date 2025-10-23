@@ -216,7 +216,7 @@ SeChild = Child2()
 SeChild.Punish()
 
 
-#exercise 1:
+#exercise 1:　（ビックダン）
 class BankAccount:
     def __init__(self, owner, balance=0):
         self.owner = owner
@@ -237,7 +237,7 @@ a1.withdrawn(2000)
 a1.withdrawn(800)
 a1.show_balance()
 
-#exercise 2: 
+#exercise 2: （ビックダン）
 class Member:
     total = 0
     def __init__(self, name):
@@ -252,7 +252,7 @@ m1 = Member("Aki")
 m2 = Member("Sora")
 Member.show_total()
 
-#exercise 3: Inheritance and Method Overriding:
+#exercise 3: Inheritance and Method Overriding:(ビックダン)
 class Animal:
     def speak (self):
         print("Animal sound")
@@ -265,6 +265,86 @@ d = Dog()
 a.speak()
 d.speak()
 
+#exercise 4: Static Method Example　（ビックダン）
+class Converter:
+    def __init__(self, amount):
+        self.amount = amount
+    @staticmethod
+    def yen_to_usd (amount):
+        return amount / 150
+    
+print(Converter.yen_to_usd(3000))
 
+#exercise 5: Inheritance and Extended Behavior (ビックダン)
+class Vehicle:
+    def __init__(self, name, speed):
+        self.name = name
+        self.speed = speed 
+    def move(self):
+        print(f"{self.name} is moving at {self.speed} km/h")
+class Car (Vehicle):
+    def __init__(self, name, speed,fuel):
+        super().__init__(name, speed)
+        self.fuel = fuel 
+    def refuel(self, refuel):
+        return self.fuel + refuel 
+    
+v = Vehicle("Bike", 20)
+v.move()
 
+c= Car("Prius", 60, 10)
+c.move()
+c.refuel(5)
+c.move()
+
+#exercise 5: Inheritance and Extended Behavior (ChatGPT)
+class Vehicle:
+    def __init__(self, name, speed):
+        self.name = name
+        self.speed = speed
+    def move (self):
+        print(f"{self.name} is moving at {self.speed} km/h")
+class Car (Vehicle):
+    def __init__(self, name, speed, fuel):
+        super().__init__(name, speed)
+        self.fuel = fuel 
+    def move(self):
+        super().move()
+        if self.fuel <= 0:
+            print("running out of fuel")
+        else:
+            print(f"{self.name} is moving at {self.speed} km/h")
+            self.fuel -= 2
+    def refuel (self, amount):
+        self.fuel += amount 
+
+v = Vehicle("Bike", 20)
+v.move()
+
+c= Car("Prius", 60, 10)
+c.move()
+c.refuel(5)
+c.move()        
+        
+#exercise 6: Collaboration between classes (ビックダン)
+class Student:
+    def __init__(self, name, score):
+        self.name = name
+        self.score = score
+class Classroom():
+    def __init__(self):
+        self.total_students= []
+    def add_students(self, student):
+        self.total_students.append(student)
+    def average_score(self):
+        total = sum(s.score for s in self.total_students)
+        return total/len(self.total_students)
+c = Classroom()
+c.add_students(Student("Taro", 80))
+c.add_students(Student("Hanako", 90))
+print(c.average_score())
+
+        
+    
+            
         

@@ -345,6 +345,45 @@ c.add_students(Student("Hanako", 90))
 print(c.average_score())
 
         
+#exercise 7: (ビックダン)
+class Book:
+    def __init__(self, title, pages):
+        self.title = title
+        self.pages = pages
+class Library:
+    def __init__(self):
+        self.Total_pages = []
+    def add_book(self,book):
+        self.Total_pages.append(book)
+    def total_pages(self):
+        return sum(b.pages for b in self.Total_pages)
+lib = Library()
+lib.add_book(Book("the silence of the lambs", 300))
+lib.add_book(Book("Yellow flower on the green field", 250))
+print(lib.total_pages())
+
+#exercise 7: (Chat GPT)
+class Book:
+    def __init__(self, title, pages):
+        self.title = title
+        self.pages = pages
+class Library:
+    def __init__(self):
+        self.Total_pages = []
+    def add_book(self,book):
+        self.Total_pages.append(book)
+    def total_pages(self):
+        total = 0 
+        for x in self.Total_pages:
+            total += x.pages
+        return total 
+lib = Library()
+lib.add_book(Book("the silence of the lambs", 300))
+lib.add_book(Book("Yellow flower on the green field", 250))
+print(lib.total_pages())
+
+        
     
+            
             
         

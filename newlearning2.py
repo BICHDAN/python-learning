@@ -382,8 +382,64 @@ lib.add_book(Book("the silence of the lambs", 300))
 lib.add_book(Book("Yellow flower on the green field", 250))
 print(lib.total_pages())
 
+
+#special method
+#usual way:
+class Student:
+    def __init__(self, name, score):
+        self.name = name 
+        self.score = score
+    def score_student(self):
+        return(f"{self.name} gains {self.score} scores")
+c = Student("Timmy", 89)
+print(c.score_student())
+
+#__str__:
+class Student:
+    def __init__(self, name, score):
+        self.name = name 
+        self.score = score
+    def __str__(self):
+        return(f"{self.name} gains {self.score} scores")
+c = Student("Timmy", 89)
+print(c)
+#__add__:
+class Student:
+    def __init__(self, name, score):
+        self.name = name 
+        self.score = score 
+    def __add__(self, other):
+        return self.score + other.score
+a = Student("Johnson", 39)
+b = Student("Dagota", 90)
+print(a + b)
+
+#__len__:
+class Classroom:
+    def __init__(self):
+        self.total = []
         
-    
-            
-            
+    def add_student (self,student):
+        self.total.append(student)
         
+    def __len__(self):
+        return len(self.total)
+c = Classroom()
+c.add_student("Neko")
+c.add_student("Miki")
+print(len(c)) # python will call __len__ method when typing len(c)
+
+#__eq__:
+class Student:
+    def __init__(self, name, score):
+        self.name = name 
+        self.score = score 
+    def __eq__(self, other):
+        return self.name == other.name and self.score == other.score
+
+s1 = Student("Taro", 80)
+s2 = Student("Taro", 80)
+s3 = Student("Kenji", 90)
+
+print(s1 == s2)
+print(s2 == s3)

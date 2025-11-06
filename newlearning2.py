@@ -498,6 +498,14 @@ class Person:
     @property
     def __str__(self):
         return f"First name: {self.first}\nLast name: {self.last}\nAge: {self.age}"
+    @property
+    def email (self):
+        return f"{self.first}_{self.last}@gmail.com"
+    @property
+    def fullname (self):
+        return f"Fullname: {self.first} {self.last}"
+    def introduce(self):
+        return f"{self.fullname}\n{self.age}\n{ self.email}" 
 
 class Student(Person):
     Student_count = 0
@@ -508,7 +516,6 @@ class Student(Person):
         self.score = score
         Student.Student_count += 1
         Student.Student_list.append(self)
-
     @classmethod
     def Enrolled (cls):
         print(f"Student count has reached {Student.Student_count} students")
@@ -539,16 +546,22 @@ class Student(Person):
             scores = (x.score*4)/100      # assign a expression to calculate 
             pct.append(scores)            # use list comprehension to create a list of results for pct
         return pct
+    def introduce(self):
+        u = (self.score*4)/100
+        return super().introduce() + "\n" + str(u)
             
 class Teacher(Person):
     def __init__(self, first, last, age, field):
         super().__init__(first, last, age)
         self.field = field
 
-Persion1 = Person("Peter", "Jonathan", 21)
+#test results
+Person1 = Person("Peter", "Jonathan", 21)
 Person2 = Person("Magot", "Rodrigo", 23)
 Person.Total()
 print(Person2.__str__)
+print(Person2.fullname)
+print(Person1.introduce())
 
 stu1 = Student("Miniki", "koneki", 23, 2025, 50)
 stu2 = Student("Okiji", "Sinaku", 24, 2023, 90)
@@ -556,3 +569,4 @@ Student.from_string("First Last,age=19,year=2025,score=88")
 Student.from_string("Johne Home,age=20,year=2023,score=90") 
 Student.Enrolled()
 print(Student.percent_to_gpa())
+print(stu1.introduce())
